@@ -43,7 +43,7 @@ def response(userRespons):
     req_tfidf = flat[-2]
 
     if(req_tfidf==0):
-        bot_response=bot_response+"Tyler: Sorry, what do you mean?"
+        bot_response=bot_response+" Sorry, what do you mean?"
 
         return bot_response
     else:
@@ -51,7 +51,7 @@ def response(userRespons):
         return bot_response
 
 flag=True 
-print("Tyler: Hi! My Name is Tyler, if you wish to exit please type bye.")
+print("Chatbot: Hi! My Name is Tyler, if you wish to exit please type bye.")
 
 while(flag==True):
     user_response = raw_input()
@@ -64,9 +64,8 @@ while(flag==True):
             if(greeting(user_response)!=None):
                 print("Chatbot: "+greeting(user_response))
             else:
-                # print("ROBO: ",end="")
                 print(response(user_response))
                 listOfSentences.remove(user_response)
     else:
         flag=False
-        print("ROBO: Bye! take care..")
+        print("Chatbot: Bye! take care..")
